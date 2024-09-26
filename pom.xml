@@ -1,8 +1,4 @@
 
-
-
-<!--changes done to pom.xml file-->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
@@ -19,6 +15,8 @@
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source> <!-- Java 7 Source Level -->
+    <maven.compiler.target>1.7</maven.compiler.target> <!-- Java 7 Target Level -->
   </properties>
 
   <modules>
@@ -38,14 +36,17 @@
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version> <!-- Updated plugin version -->
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.7</source> <!-- Upgrade to Java 7 -->
+          <target>1.7</target> <!-- Upgrade to Java 7 -->
+          <release>17</release> <!-- Ensure compatibility with OpenJDK 17 -->
         </configuration>
       </plugin>
 
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
+        <version>2.2.1</version>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
@@ -53,6 +54,7 @@
 
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
+        <version>3.0</version>
         <configuration>
           <reportPlugins>
             <plugin>
@@ -98,7 +100,7 @@
 
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.3.2</version>
+          <version>3.8.1</version> <!-- Updated to the newer version -->
         </plugin>
 
         <plugin>
