@@ -33,13 +33,15 @@
 
   <build>
     <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version> <!-- Updated plugin version -->
-        <configuration>
-          <release>17</release> <!-- Ensure compatibility with OpenJDK 17 -->
-        </configuration>
-      </plugin>
+     <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version> <!-- Use a more recent version -->
+            <configuration>
+                <source>17</source> <!-- Use 17 for OpenJDK 17 -->
+                <target>17</target> <!-- Use 17 for OpenJDK 17 -->
+            </configuration>
+        </plugin>
 
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
